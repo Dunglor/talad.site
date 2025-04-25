@@ -1,0 +1,66 @@
+* {
+    font-family: "Poppins", sans-serif;
+    color: #48bb78;
+}
+
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 999;
+    width: 100%; /* Ensure the header spans full width */
+    height: 100px; /* Adjust height as needed */
+}
+
+.header-wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%; /* Ensure the wrapper fills the header space */
+}
+
+h1 {
+    color: #14AE5C;
+    font-size: 30px;
+}
+
+.orange-letter {
+    color: #e46a3a;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-header li, .nav-header a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    color: #48bb78;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    color: #48bb78;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+}
+
+/* To prevent the content from moving up under the fixed header */
+body {
+    padding-top: 100px; /* Match the height of the fixed header */
+}
