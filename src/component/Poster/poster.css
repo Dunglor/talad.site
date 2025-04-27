@@ -1,65 +1,28 @@
-
 .poster-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -1;
-    margin-top: 5rem;
-  }
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  margin-top: 5rem; /* Push the image below the fixed header */
+}
+
+/* Phones and small screens */
+@media (max-width: 500px) {
   .full-screen-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Default for general devices */
+    object-fit: contain; /* Ensures full poster is visible */
   }
-  
-  /* Desktop screens */
-  @media (min-width: 1024px) {
-    .full-screen-image {
-        object-fit: cover;
-    }
+}
+
+/* Desktop and larger screens */
+@media (min-width: 1024px) {
+  .full-screen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill the screen while covering the background */
   }
-  
-  /* Phones and small screens */
-  @media (max-width: 500px) {
-    .full-screen-image {
-      object-fit: cover; /* Show full poster without cropping */
-    }
-  
-    .poster-container {
-      width: 100vw;
-      height: 100vh;
-    }
-  }
-  .poster-container {
-      margin-top: 5rem; /* Push image below the fixed header */
-  }
-  
-    .poster-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;  /* Full screen width */
-      height: 100vh; /* Full screen height */
-      overflow: hidden; /* Prevents scrollbars */
-      z-index: -1; /* Moves it to the background */
-    }
-    
-    .full-screen-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Ensures it covers the screen */
-    }
-    
-    /* Laptop/Desktop Screens */
-    @media (min-width: 1024px) {
-      .full-screen-image {
-        object-fit: contain; /* Ensures the full poster is visible */
-      }
-    }
-    
-  
-  
+}
