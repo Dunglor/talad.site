@@ -23,6 +23,6 @@
   .full-screen-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Fill the screen while covering the background */
+    object-fit: contain; /* Fill the screen while covering the background */
   }
 }
